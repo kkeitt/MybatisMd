@@ -7,7 +7,7 @@ Spring提供了**Resource**接口，该接口有对于不同资源类型的实�
 - File getFile()throws IOException：如果资源对应一个文件，返回对应的File对象。
 - InputStream getInputStream()throws IOException：返回资源对应的输入流。
 
-![Resource及其实现类](..\images\ResourceUml.png)
+![Resource及其实现类](/images/ResourceUml.png)
 <center>Resource及其实现类</center>
 
 - `WritableResource`：可写资源接口，有两个实现类，`FileSystemResource`和`PathResource`。
