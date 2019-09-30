@@ -54,3 +54,17 @@ EncodedResource encode = new EncodedResource(res,"UTF-8);
 |没有前缀|com/test/app.xml|根据ApplicationContext的具体实现类采用对应类型的Resource|
 ### 2.2classpath:和classpath*:的区别
 假设有多个jar包或文件系统类路径有一个相同的包名，`classpath:`只会在第一个加载的jar包的类路径下查找，而`classpath*:`会扫描所有这些jar包的类路径。
+
+### 2.2Ant风格的资源地址
+Ant风格的资源地址支持三种匹配符
+
+- `？`：匹配文件名中的一个字符
+- `*`：匹配文件名中的任意字符
+- `**`：匹配多层路径
+例如：
+
+|资源地址|可匹配文件|
+|:--------|:---------|
+|`classpath:spring/spring?.xml`|匹配类路径下的spring/spring1.xml,spring/spring2.xml,spring/spring3.xml。|
+|`classpath:spring/*.xml`|匹配类路径下，spring目录下所有以.xml结尾的文件。|
+|`classpath:/spring/**/*.xml`|匹配类路径下，Spring目录及其子目录下所有以.xml结尾的文件。如：spring/test.xml,spring/content/test.xml。|
