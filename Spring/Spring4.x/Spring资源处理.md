@@ -70,7 +70,7 @@ Ant风格的资源地址支持三种匹配符
 |`classpath:/spring/**/*.xml`|匹配类路径下，Spring目录及其子目录下所有以.xml结尾的文件。如：spring/test.xml,spring/content/test.xml。|
 
 Spring定义了一套资源加载的接口，并提供了实现
-![UML](../images/ResourceLoaderUml.PNG)
+![UML](../images/ResourceLoaderUml.png)
 
 `ResourceLoader`接口仅有一个`getResource`方法，可以根据资源地址前缀加载文件资源，但是不支持Ant风格的表达式。
 `ResourcePatternResolver`接口扩展`Resource`接口，定义了一个新的`getResource`方法，该方法支持资源地址前缀及Ant风格的表达式。
